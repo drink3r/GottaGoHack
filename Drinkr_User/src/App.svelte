@@ -8,7 +8,7 @@
     <div class="beer">
       <button class="btn-login" on:click={() => (mode = 2)}>Connexion</button>
       <img
-        src="https://assets.stickpng.com/thumbs/6119457ef8fe340004e0d29e.png"
+        src="/beer.png"
         alt="Beer"
         width="64px"
       />
