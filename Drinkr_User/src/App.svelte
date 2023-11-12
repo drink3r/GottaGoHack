@@ -3,22 +3,28 @@
 </script>
 
 <main>
-  <div class="drinkr">Drinkr</div>
-  {#if mode == 0}
-    <div class="beer">
-      <button class="btn-login" on:click={() => (mode = 2)}>Connexion</button>
-      <img
-        src="/beer.png"
-        alt="Beer"
-        width="64px"
-      />
-    </div>
-    <h1 class="title">Envie de sortir ?</h1>
-    <button class="btn-signup" on:click={() => (mode = 1)}>Je m'inscris</button>
-    <div class="store-container">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="apple-store" />
-        <img src="https://lh3.googleusercontent.com/q1k2l5CwMV31JdDXcpN4Ey7O43PxnjAuZBTmcHEwQxVuv_2wCE2gAAQMWxwNUC2FYEOnYgFPOpw6kmHJWuEGeIBLTj9CuxcOEeU8UXyzWJq4NJM3lg=s0" alt="play-store" />
-    </div>
+  <div class="banner">
+    <div class="drinkr">Drinkr</div>
+    {#if mode == 0}
+      <div class="beer">
+        <button class="btn-login" on:click={() => (mode = 2)}>Connexion</button>
+        <img
+          src="/beer.png"
+          alt="Beer"
+          width="64px"
+        />
+      </div>
+      <h1 class="title">Envie de sortir ?</h1>
+      <button class="btn-signup" on:click={() => (mode = 1)}>Je m'inscris</button>
+      <div class="store-container">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="apple-store" />
+          <img src="https://lh3.googleusercontent.com/q1k2l5CwMV31JdDXcpN4Ey7O43PxnjAuZBTmcHEwQxVuv_2wCE2gAAQMWxwNUC2FYEOnYgFPOpw6kmHJWuEGeIBLTj9CuxcOEeU8UXyzWJq4NJM3lg=s0" alt="play-store" />
+      </div>
+      <div class="user-satisfaction">
+        <div class="title_p1">
+          Faites de nouvelles rencontres autrement !
+        </div>
+      </div>
   {:else if mode == 1}
     <div class="container">
       <div class="elt">
@@ -41,19 +47,26 @@
       <div class="elt">
         <button type="submit" on:click={() => (mode = 2)}>S'inscrire</button>
       </div>
-
     </div>
   {:else if mode == 2}
     <h2>Mon espace</h2>
   {/if}
+  </div>
 </main>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,700&display=swap");
+  .banner {
+    background: linear-gradient(0deg, rgba(240, 231, 152, 1) 0%, rgba(255, 217, 136, 1) 100%);
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+  }
   .title {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     margin-top: 30vh;
+    margin-bottom: 15vh;
   }
   main {
     width: 100vw;
@@ -67,6 +80,7 @@
     color: white;
     font-size: 24px;
     background-color: #e68e12;
+    margin-bottom: 10vh;
   }
 
   .drinkr {
@@ -118,10 +132,60 @@
 
 .store-container {
     padding: 1rem;
+    margin-bottom: 5vh;
 }
 
 .store-container > img {
     height: 3.5rem;
     margin: .5rem;
 }
+
+.user-satisfaction {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: black;
+    font-size: 24px;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_p1 {
+    border: 1px solid black;
+}
+
+  button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 24px;
+    background-color: #e68e12;
+    margin-bottom: 10vh;
+  }
+
+  input {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: black;
+    font-size: 24px;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 </style>
