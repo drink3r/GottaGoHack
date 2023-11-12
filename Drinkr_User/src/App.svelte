@@ -37,7 +37,6 @@
           alt=""
         />
       </div>
-      <div>Drinkr est une application</div>
     {:else if mode == 1}
       <div class="container">
         <div class="elt">
