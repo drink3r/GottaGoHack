@@ -12,6 +12,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  overflow: hidden;
+  color: #213547;
+  background-color: #ffffff;
 }
 
 a {
@@ -42,11 +46,13 @@ h1 {
 }
 
 #app {
+  min-height: 100vh;
   background: rgb(240, 231, 152);
   background: linear-gradient(0deg, rgba(240, 231, 152, 1) 0%, rgba(255, 217, 136, 1) 100%);
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 button {
@@ -72,6 +78,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
+    overflow: hidden;
     color: #213547;
     background-color: #ffffff;
   }
